@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('Jumlah');
             $table->string('Donatur')->nullable();
             $table->string('Keterangan')->nullable();
-            $table->timestamps('tanggaltransaksi');
+            $table->timestamps('tanggaltransaksi')->nullable();
         });
     }
 
