@@ -18,7 +18,8 @@ return new class extends Migration
             $table->decimal('Jumlah');
             $table->string('Donatur')->nullable();
             $table->string('Keterangan')->nullable();
-            $table->timestamps('tanggaltransaksi')->nullable();
+            $table->timestamp('tanggaltransaksi')->nullable(); // Kolom timestamp
+            $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
 
