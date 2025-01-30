@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
     plugins: [
@@ -8,4 +9,16 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        manifest: true,
+        outDir: 'public/build',
+    },
+    css: {
+        postcss: {
+            plugins: [
+                tailwindcss(),
+            ],
+        },
+    },
 });
+
